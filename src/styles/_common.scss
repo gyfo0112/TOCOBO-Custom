@@ -1,0 +1,161 @@
+.section {
+    padding: 6rem 0;
+    position: relative;
+    z-index: 0;
+
+    &#hero {
+        padding: 0;
+        margin-top: 0; 
+        transition: margin-top .3s;
+    }
+    &#collection{
+        background-color: var(--bg2);
+        padding: 10rem 0;
+    }
+    &#skincare{
+        &::after{
+            display: block;
+            content:"";
+            position: absolute;
+            width: 100%;
+            height: 10rem;
+            left: 0;
+            bottom: 0;
+            background-color: var(--bg3);
+        }
+    }
+    &#instargram{
+        background-color: var(--bg-section);
+    }
+
+    h2.tit {
+        font-size: 7.3rem;
+        font-weight: 200;
+    }
+
+    p.txt {
+        font-size: 1.6rem;
+    }
+
+    a.btn {
+        display: inline-block;
+        margin-top: 3rem;
+        font-size: 1.6rem;
+        text-align: center;
+        width: 27rem;
+        height: 5rem;
+        align-content: center;
+        color: var(--bg);
+        background-color: var(--primary);
+        border-radius: 6rem;
+        position: relative;
+        border: .1rem solid transparent;
+        transition: all .8s;
+        overflow: hidden;
+        text-transform: uppercase;
+        z-index: 1;
+        cursor: pointer;
+
+        &::after {
+            content: "";
+            border-radius: 6rem;
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background-color: var(--primary);
+            left: 0;
+            top: 0;
+            z-index: 0;
+            transition: all .5s;
+        }
+
+        &:hover {
+            color: var(--primary);
+
+            &::after {
+                opacity: 1;
+                background-color: var(--bg);
+                z-index: -1;
+            }
+        }
+    }
+    
+    p.txt-2 {
+        font-size: 1.9rem;
+        color:var(--secondary);
+        font-family: 'Source Serif 4',serif;
+    }
+    
+    p.txt-1 {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        color:#202020
+    }
+}
+
+.section,
+header,
+footer {
+    .inner {
+        max-width: var(--maxw);
+        margin: auto;
+        position: relative;
+        height: 100%;
+        padding: 0 2rem; 
+    }
+}
+
+.app-container {
+    &.up {
+        .TopBanner {
+            top: -110%
+        }
+
+        header {
+            top: 0
+        }
+
+        #hero {
+            margin-top: 0;
+        }
+    }
+
+    &.scrolled {
+        header {
+            background: #ffffff;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .section {
+        &#hero {
+            margin-top: 0; 
+        }
+    }
+    .app-container.up #hero {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 4rem 0;
+
+        &#hero {
+            margin-top: 0; 
+        }
+        &#collection{
+            padding: 6rem 0;
+        }
+        
+        h2.tit {
+            font-size: 4rem;
+        }
+    }
+    .app-container.up #hero {
+        margin-top: 0; 
+    }
+}

@@ -1,0 +1,85 @@
+.FixedTopBtn {
+    position: fixed;
+    right: 4rem;
+    bottom: 4rem;
+    z-index: 50;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+
+    .top-btn {
+        width: 5rem;
+        height: 5rem;
+        background-color: var(--primary);
+        background-image: url(/img/icon_top.svg);
+        background-position: center;
+        background-size: 40%;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        font-size: 0;
+        box-shadow: 0 0.4rem 1.5rem rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: 0 0.6rem 2rem rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .talk-btn {
+        width: 5rem;
+        height: 5rem;
+        background-color: #ffffff;
+        background-position: center;
+        background-size: 50%;
+        background-repeat: no-repeat;
+        border: 0.1rem solid var(--primary);
+        border-radius: 50%;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        box-shadow: 0 0.4rem 1.5rem rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: translateY(-0.5rem);
+            background-color: var(--primary);
+            color: #ffffff;
+        }
+    }
+
+    p {
+        color: var(--primary);
+        font-family: 'Source Serif Pro', serif;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 1.6rem;
+        margin: 0;
+        margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .FixedTopBtn {
+        right: 2rem;
+        bottom: 2rem;
+
+        .top-btn,
+        .talk-btn {
+            width: 4.5rem;
+            height: 4.5rem;
+        }
+
+        p {
+            font-size: 1.4rem;
+        }
+    }
+}

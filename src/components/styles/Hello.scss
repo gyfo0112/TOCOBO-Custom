@@ -1,0 +1,128 @@
+.hello-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12rem;
+    gap: 10rem;
+
+    .img-wrap {
+        width: 63rem; 
+        height: 63rem;
+        flex: none;
+        border-radius: 2rem;
+        overflow: hidden;
+        box-shadow: 0 2.5rem 6rem rgba(0, 0, 0, 0.15); 
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        &:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: 0 3rem 7rem rgba(0, 0, 0, 0.18);
+        }
+    }
+
+    .t-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 63rem;
+
+        p.txt-2 {
+            color: #009BDE;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        h2.tit {
+            color: var(--primary);
+            font-size: 5.6rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 3.5rem;
+        }
+
+        p.txt-1 {
+            color: var(--text);
+            font-size: 1.5rem;
+            line-height: 1.6;
+            margin-bottom: 5rem;
+            word-break: keep-all; 
+            max-width: 55rem;
+        }
+
+        a.btn {
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        padding-top: 8rem;
+        gap: 5rem;
+
+        .img-wrap {
+            width: 45%;
+            height: auto;
+            aspect-ratio: 1 / 1;
+        }
+
+        .t-wrap {
+            width: 50%;
+
+            p.txt-2 {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            h2.tit {
+                font-size: 4.5rem;
+                margin-bottom: 2.5rem;
+            }
+
+            p.txt-1 {
+                font-size: 1.4rem;
+                margin-bottom: 4rem;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        padding-top: 6rem;
+        gap: 4rem;
+
+        .img-wrap {
+            width: 100%;
+            max-width: 45rem;
+            height: auto;
+            aspect-ratio: 1 / 1;
+        }
+
+        .t-wrap {
+            width: 100%;
+
+            p.txt-2 {
+                font-size: 1.4rem;
+                margin-bottom: 1rem;
+            }
+
+            h2.tit {
+                font-size: 3.8rem;
+                margin-bottom: 1.5rem;
+            }
+
+            p.txt-1 {
+                font-size: 1.3rem;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}

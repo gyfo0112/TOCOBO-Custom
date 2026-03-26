@@ -1,0 +1,22 @@
+:root {
+  --bg: #ffffff;
+  --bg-cta: #d1d1d1;
+  --bg-collection: #faf9f6;
+  --bg-section: #fbfbfb;
+
+  --fg: #111111;
+  --text: #231f20;
+  --muted: #888888;
+  --primary: #0000cd;
+  --white: #ffffff;
+  --border: #eeeeee;
+
+  --maxw: 160rem;
+  --gutter: 2rem;
+  --header-height: 10.5rem;
+}
+
+$bp-lg: 1280px;
+$bp-md: 992px;
+$bp-sm: 768px;
+$bp-xs: 480px;

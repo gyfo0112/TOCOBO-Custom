@@ -1,0 +1,142 @@
+.collab-section {
+  height: 90rem;
+  background-color: #FBFBFB;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+
+  .collab-inner {
+    text-align: center;
+    margin-bottom: 6rem;
+
+    h2.tit {
+      color: var(--primary);
+      font-size: 5.4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  .collab-slider {
+    width: 100%;
+    padding: 3rem 0; 
+
+    .swiper-slide {
+      width: 77.7rem;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      opacity: 0.6;
+      transform: scale(0.85);
+      cursor: pointer;
+
+      .collab-card .img-wrap {
+        filter: grayscale(100%);
+        transition: filter 0.5s ease;
+      }
+
+      &.swiper-slide-active {
+        opacity: 1;
+        transform: scale(1);
+        cursor: default;
+
+        .collab-card .img-wrap {
+          filter: grayscale(0%);
+        }
+      }
+    }
+
+    .collab-card {
+      width: 100%;
+      height: 49rem;
+      background-color: #ffffff;
+      border-radius: 2rem;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.85rem;
+      margin: 0 auto;
+      box-sizing: border-box;
+
+      .img-wrap {
+        width: 100%;
+        height: calc(100% - 5rem);
+        border-radius: 1.5rem;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .card-txt {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--text);
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    height: auto;
+    padding: 8rem 0;
+
+    .collab-inner {
+      margin-bottom: 4rem;
+      h2.tit { font-size: 4rem; }
+    }
+
+    .collab-slider {
+      .swiper-slide {
+        width: 50rem;
+      }
+
+      .collab-card {
+        height: 35rem;
+        padding: 1.5rem;
+
+        .card-txt {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 6rem 0;
+
+    .collab-inner {
+      margin-bottom: 3rem;
+      h2.tit { font-size: 3.2rem; }
+    }
+
+    .collab-slider {
+      .swiper-slide {
+        width: 28rem; 
+      }
+
+      .collab-card {
+        height: 32rem; 
+        padding: 1.2rem;
+        border-radius: 1.5rem;
+
+        .img-wrap {
+          border-radius: 1rem;
+        }
+
+        .card-txt {
+          font-size: 1.3rem;
+          margin-top: 0.5rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
