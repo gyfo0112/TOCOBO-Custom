@@ -1,4 +1,4 @@
-# TOCOBO: Re-edit by ADER 🖤
+# TOCOBO: Re-edit by ADER 💙
 
 TOCOBO 웹사이트를 베이스로 ADERERROR 감성으로 리디자인한 클론 코딩 프로젝트입니다.
 
